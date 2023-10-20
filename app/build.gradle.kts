@@ -1,11 +1,13 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
     namespace = "io.ashkay.crashlibstest"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "io.ashkay.crashlibstest"
@@ -66,4 +68,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    //============Firebase-Crashlytics=================
+    implementation("com.google.firebase:firebase-crashlytics:18.5.0")
+    implementation("com.google.firebase:firebase-analytics:21.4.0")
 }

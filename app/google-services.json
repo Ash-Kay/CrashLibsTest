@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "764661941397",
+    "project_id": "crashlibstest",
+    "storage_bucket": "crashlibstest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764661941397:android:c0dec76aa51085a3d0c79c",
+        "android_client_info": {
+          "package_name": "io.ashkay.crashlibstest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFeyRmpWj3fM0VGxoi-8qj40jF1sf8-rE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
