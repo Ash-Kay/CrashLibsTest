@@ -72,4 +72,7 @@ dependencies {
     //============Firebase-Crashlytics=================
     implementation("com.google.firebase:firebase-crashlytics:18.5.0")
     implementation("com.google.firebase:firebase-analytics:21.4.0")
+
+    //============Instabug=================
+    implementation("com.instabug.library:instabug:12.0.0")
 }
