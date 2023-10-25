@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CrashLibsTest"
 include(":app")
- 
+include(":alpha")

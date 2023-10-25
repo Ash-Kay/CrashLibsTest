@@ -1,22 +1,17 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
 }
 
 android {
-    namespace = "io.ashkay.crashlibstest"
-    compileSdk = 34
+    namespace = "io.ashkay.alpha"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "io.ashkay.crashlibstest"
         minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -54,6 +49,8 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
@@ -61,7 +58,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-    implementation(project(mapOf("path" to ":alpha")))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -69,11 +65,4 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-
-    //============Firebase-Crashlytics=================
-    implementation("com.google.firebase:firebase-crashlytics:18.5.0")
-    implementation("com.google.firebase:firebase-analytics:21.4.0")
-
-    //============Instabug=================
-    implementation("com.instabug.library:instabug:12.0.0")
 }

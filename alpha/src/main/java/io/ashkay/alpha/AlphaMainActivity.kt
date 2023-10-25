@@ -1,6 +1,5 @@
-package io.ashkay.crashlibstest
+package io.ashkay.alpha
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,13 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.ashkay.alpha.AlphaMainActivity
-import io.ashkay.crashlibstest.ui.theme.CrashLibsTestTheme
+import io.ashkay.alpha.ui.theme.CrashLibsTestTheme
 
-class MainActivity : ComponentActivity() {
-
-    lateinit var uninitLateinitVar: List<Int>
-
+class AlphaMainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -33,19 +28,9 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column(modifier = Modifier.padding(8.dp)) {
                         Button(onClick = {
-                            throw RuntimeException("Whoops")
+                            throw RuntimeException("AlphaWhoops")
                         }) {
-                            Text(text = "Runtime Crash: Whoops")
-                        }
-                        Button(onClick = {
-                            uninitLateinitVar.size
-                        }) {
-                            Text(text = "Access lateinit var Crash")
-                        }
-                        Button(onClick = {
-                            startActivity(Intent(applicationContext, AlphaMainActivity::class.java))
-                        }) {
-                            Text(text = "Start Alpha")
+                            Text(text = "Runtime Crash: AlphaWhoops")
                         }
                     }
                 }
