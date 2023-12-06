@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CrashLibsTest</string>
+    <string name="acra_toast_text">I crashed :(</string>
 </resources>

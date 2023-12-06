@@ -76,4 +76,10 @@ dependencies {
 
     //============Instabug=================
     implementation("com.instabug.library:instabug:12.0.0")
+
+    //============Acra=================
+    val acraVersion = "5.11.3"
+    implementation("ch.acra:acra-http:$acraVersion")
+    implementation("ch.acra:acra-dialog:$acraVersion")
+    implementation("ch.acra:acra-toast:$acraVersion")
 }
